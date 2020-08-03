@@ -1,0 +1,131 @@
+@import '../../variables';
+@import '../../mixins';
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        margin: 16px;
+    }
+}
+
+#btn-menu-label {
+    height: 20px;
+    width: 20px;
+    margin: 16px;
+}
+
+.navicon{
+    @include menu-icon(3px,relative);
+    display: inline-block;
+
+    &::before {
+        content: "";
+        @include menu-icon(6px,absolute);
+    }
+
+    &::after {
+        content: "";
+        @include menu-icon(-6px,absolute);
+    }
+}
+
+#btn-menu {
+    display: none;
+}
+
+  #btn-menu:checked ~ #nav-link {
+    visibility: visible;
+    opacity: 1;
+    height: 224px;
+  }
+
+  #btn-menu:checked ~  #btn-menu-label {
+       
+    .navicon {
+        @include menu-icon('',relative);
+        transform: rotate(135deg);
+        display: inline-block;
+    
+        &::before {
+            content: "";
+            @include menu-icon(0px,absolute);
+            transform: rotate(0deg);
+        }
+    
+        &::after {
+            content: "";
+            @include menu-icon(0px,absolute);
+            transform: rotate(-90deg);
+        }
+    }
+  }
+
+  #nav-link {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      width: 100%;
+      line-height: 28px;
+      background-color: $menu-background-color-mobile;
+      
+      li {
+        font-size: 16px;
+        color: $menu-font-color-mobile;
+        font-family: $font;
+        font-weight: 100;
+        padding: 12px 16px;
+      }
+  }
+
+  @media screen and (min-width:1024px){
+      header {
+          margin: 0 84px;
+      }
+    }
+
+  @media screen and (min-width:768px){
+    #btn-menu-label {
+        display: none;
+    }
+
+    #nav-link {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+        width: fit-content;
+        background-color: $menu-background-color-desktop;
+        transition: none;
+
+        ul {
+            display: flex;
+            list-style: none;
+            li{
+                color: $menu-font-color-desktop;
+            }
+        }
+    }
+
+    #btn-menu:checked ~ #nav-link {
+        visibility: visible;
+        opacity: 1;
+        height: fit-content;
+      }
+  }
+
+  @media screen and (min-width:600px){
+    header {
+        img {
+            width: 36px;
+            height: 36px;
+        }
+
+        a {
+            color: $text-color;
+        }
+    }
+  }
+

@@ -1,0 +1,15 @@
+#where img {
+  width: 100%;
+  max-width: 500px; }
+#where div p {
+  max-width: 464px; }
+#where div > * {
+  margin: 12px 0; }
+
+@media screen and (min-width: 768px) {
+  #where {
+    justify-content: center;
+    display: flex;
+    align-items: center; } }
+
+/*# sourceMappingURL=where.css.map */

@@ -1,0 +1,75 @@
+@import '../../variables';
+
+#episodes{
+    position: relative;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h1{
+        margin: 21px 16px;
+        color: white;
+    }
+
+    ul {
+        display: grid;
+        gap: 11px 0;
+        grid-template-rows: repeat(4, 1fr);
+        li{
+            margin: auto;
+            iframe {
+                min-width: 300px;
+                border: 0;
+            }
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transform: skewY(-6deg);
+        height: 110%;
+        background-image: $bg-gradient;
+        z-index: -1;
+    }
+
+}
+
+@media screen and (min-width:768px){
+    #episodes {
+        height: 1042px;
+        h1 {
+            margin: 26px 200px;
+        }
+        ul {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            gap: 72px 0;
+            iframe {
+                height: 232px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+    #episodes {
+        ul {
+            iframe {
+                width: 450px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1366px){
+    #episodes {
+        ul {
+            iframe {
+                width: 584px;
+            }
+        }
+    }
+}

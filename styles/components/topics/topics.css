@@ -1,0 +1,31 @@
+#topics {
+  display: flex;
+  flex-direction: column; }
+  #topics div {
+    display: flex;
+    flex-direction: column; }
+    #topics div > * {
+      margin: 25px; }
+    #topics div div {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center; }
+      #topics div div * {
+        margin: 10px 0; }
+  #topics > * {
+    margin: 28px 0; }
+
+@media screen and (min-width: 768px) {
+  #topics {
+    margin: 64px 200px; }
+    #topics div {
+      flex-direction: row;
+      justify-content: space-around; }
+      #topics div div {
+        width: 260px; } }
+
+/*# sourceMappingURL=topics.css.map */

@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=IBM+Plex+Sans:wght@300;500&display=swap");
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+  header img {
+    margin: 16px; }
+
+#btn-menu-label {
+  height: 20px;
+  width: 20px;
+  margin: 16px; }
+
+.navicon {
+  position: relative;
+  height: 2px;
+  border-radius: 3px;
+  width: 18px;
+  background: #060A24;
+  transition: all 0.5s;
+  bottom: 3px;
+  display: inline-block; }
+  .navicon::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    border-radius: 3px;
+    width: 18px;
+    background: #060A24;
+    transition: all 0.5s;
+    bottom: 6px; }
+  .navicon::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    border-radius: 3px;
+    width: 18px;
+    background: #060A24;
+    transition: all 0.5s;
+    bottom: -6px; }
+
+#btn-menu {
+  display: none; }
+
+#btn-menu:checked ~ #nav-link {
+  visibility: visible;
+  opacity: 1;
+  height: 224px; }
+
+#btn-menu:checked ~ #btn-menu-label .navicon {
+  position: relative;
+  height: 2px;
+  border-radius: 3px;
+  width: 18px;
+  background: #060A24;
+  transition: all 0.5s;
+  bottom: "";
+  transform: rotate(135deg);
+  display: inline-block; }
+  #btn-menu:checked ~ #btn-menu-label .navicon::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    border-radius: 3px;
+    width: 18px;
+    background: #060A24;
+    transition: all 0.5s;
+    bottom: 0px;
+    transform: rotate(0deg); }
+  #btn-menu:checked ~ #btn-menu-label .navicon::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    border-radius: 3px;
+    width: 18px;
+    background: #060A24;
+    transition: all 0.5s;
+    bottom: 0px;
+    transform: rotate(-90deg); }
+
+#nav-link {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 100%;
+  line-height: 28px;
+  background-color: #0000EC; }
+  #nav-link li {
+    font-size: 16px;
+    color: white;
+    font-family: "IBM Plex Mono";
+    font-weight: 100;
+    padding: 12px 16px; }
+
+@media screen and (min-width: 1024px) {
+  header {
+    margin: 0 84px; } }
+@media screen and (min-width: 768px) {
+  #btn-menu-label {
+    display: none; }
+
+  #nav-link {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: fit-content;
+    background-color: white;
+    transition: none; }
+    #nav-link ul {
+      display: flex;
+      list-style: none; }
+      #nav-link ul li {
+        color: #060A24; }
+
+  #btn-menu:checked ~ #nav-link {
+    visibility: visible;
+    opacity: 1;
+    height: fit-content; } }
+@media screen and (min-width: 600px) {
+  header img {
+    width: 36px;
+    height: 36px; }
+  header a {
+    color: #060A24; } }
+#hello {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column; }
+  #hello h1 {
+    margin: 16px 0; }
+  #hello .button {
+    margin-top: 20px;
+    max-width: 226px; }
+
+@media screen and (min-width: 1024px) {
+  #hello {
+    padding: 120px 200px 5px; }
+    #hello h1 {
+      font-size: 64px; }
+    #hello p {
+      width: 75%;
+      text-align: justify; }
+    #hello .button {
+      margin-top: 56px; } }
+#episodes {
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  #episodes h1 {
+    margin: 21px 16px;
+    color: white; }
+  #episodes ul {
+    display: grid;
+    gap: 11px 0;
+    grid-template-rows: repeat(4, 1fr); }
+    #episodes ul li {
+      margin: auto; }
+      #episodes ul li iframe {
+        min-width: 300px;
+        border: 0; }
+  #episodes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: skewY(-6deg);
+    height: 110%;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    z-index: -1; }
+
+@media screen and (min-width: 768px) {
+  #episodes {
+    height: 1042px; }
+    #episodes h1 {
+      margin: 26px 200px; }
+    #episodes ul {
+      grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+      gap: 72px 0; }
+      #episodes ul iframe {
+        height: 232px; } }
+@media screen and (min-width: 1024px) {
+  #episodes ul iframe {
+    width: 450px; } }
+@media screen and (min-width: 1366px) {
+  #episodes ul iframe {
+    width: 584px; } }
+#where img {
+  width: 100%;
+  max-width: 500px; }
+#where div p {
+  max-width: 464px; }
+#where div > * {
+  margin: 12px 0; }
+
+@media screen and (min-width: 768px) {
+  #where {
+    justify-content: center;
+    display: flex;
+    align-items: center; } }
+#interview {
+  padding: 0; }
+  #interview h1 {
+    margin: 14px 16px; }
+  #interview div {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr); }
+  #interview img {
+    width: 100%;
+    max-height: 364px; }
+
+@media screen and (min-width: 600px) {
+  #interview div {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); } }
+@media screen and (min-width: 1024px) {
+  #interview h1 {
+    margin: 36px 200px; }
+  #interview div {
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto; } }
+#topics {
+  display: flex;
+  flex-direction: column; }
+  #topics div {
+    display: flex;
+    flex-direction: column; }
+    #topics div > * {
+      margin: 25px; }
+    #topics div div {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center; }
+      #topics div div * {
+        margin: 10px 0; }
+  #topics > * {
+    margin: 28px 0; }
+
+@media screen and (min-width: 768px) {
+  #topics {
+    margin: 64px 200px; }
+    #topics div {
+      flex-direction: row;
+      justify-content: space-around; }
+      #topics div div {
+        width: 260px; } }
+#news {
+  padding: 0;
+  height: 341px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  justify-content: center;
+  align-items: center; }
+  #news h1 {
+    text-align: center;
+    color: white; }
+  #news .button {
+    margin: 36px 0;
+    font-size: 16px;
+    max-width: 345px; }
+  #news::after {
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(-4deg);
+    transform-origin: bottom right;
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%); }
+
+@media screen and (min-width: 768px) {
+  #news {
+    height: 518px; } }
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 21px 40px; }
+  footer div {
+    display: flex;
+    margin: 8px 0;
+    justify-content: center; }
+  footer p {
+    font-family: "IBM Plex Mono";
+    font-size: 14px; }
+  footer i {
+    margin: 0 19px; }
+  footer a {
+    color: transparent; }
+  footer .fa {
+    color: black; }
+
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.9% 6.9%; } }
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  transition: all 0.6s;
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono"; }
+
+a {
+  color: white;
+  text-decoration: none; }
+  a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+    font-weight: 400; }
+  a:active {
+    color: rgba(6, 10, 36, 0.56);
+    text-decoration: line-through; }
+
+.button {
+  color: #060A24;
+  font-size: 18px;
+  background-color: #00F3BB;
+  border: none;
+  width: 100%;
+  padding: 13px 43px;
+  font-weight: 500;
+  text-align: center; }
+  .button:hover {
+    color: white;
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%); }
+
+section {
+  padding: 16px; }
+
+b {
+  text-decoration: line-through;
+  font-weight: 300; }
+
+h1 {
+  font-family: 'IBM Plex Sans';
+  font-size: 36px;
+  font-weight: 300; }
+
+p {
+  line-height: 22px; }
+
+li {
+  list-style: none; }
+
+@media screen and (min-width: 768px) {
+  p {
+    line-height: 24px; }
+
+  button {
+    width: fit-content;
+    height: 56px; } }
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3em; } }
+
+/*# sourceMappingURL=styles.css.map */

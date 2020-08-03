@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 21px 40px; }
+  footer div {
+    display: flex;
+    margin: 8px 0;
+    justify-content: center; }
+  footer p {
+    font-family: "IBM Plex Mono";
+    font-size: 14px; }
+  footer i {
+    margin: 0 19px; }
+  footer a {
+    color: transparent; }
+  footer .fa {
+    color: black; }
+
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.9% 6.9%; } }
+
+/*# sourceMappingURL=footer.css.map */

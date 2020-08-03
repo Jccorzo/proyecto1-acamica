@@ -1,0 +1,22 @@
+#hello {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column; }
+  #hello h1 {
+    margin: 16px 0; }
+  #hello .button {
+    margin-top: 20px;
+    max-width: 226px; }
+
+@media screen and (min-width: 1024px) {
+  #hello {
+    padding: 120px 200px 5px; }
+    #hello h1 {
+      font-size: 64px; }
+    #hello p {
+      width: 75%;
+      text-align: justify; }
+    #hello .button {
+      margin-top: 56px; } }
+
+/*# sourceMappingURL=hello.css.map */
